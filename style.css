@@ -1,0 +1,396 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #171515;
+  /* perspective: 1500px; */
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ------------------------------------------------------ */
+
+.bodyWhats {
+  background-color: #060c0c;
+  background-image: url("./Elements/Pattern3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.bodyWhats.deactive {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+.bodyTele {
+  background-color: #0b1016;
+  background-image: url("./Elements/Pattern3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+.bodyTele.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+/* ------------------------------------------------------ */
+
+.headWhats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13vh;
+  background-color: #104e37;
+}
+
+.headWhats img {
+  display: flex;
+  height: 8vh;
+}
+
+.headTele {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13vh;
+  background-color: #09658c;
+}
+
+.headTele img {
+  display: flex;
+  height: 8vh;
+}
+
+/* ------------------------------------------------------ */
+
+#buttns {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+#buttns i {
+  font-size: 1.4rem;
+}
+
+.whats {
+  height: 60px;
+  width: 140px;
+  font-size: 1.1rem;
+  background-color: #104e37;
+  color: white;
+  cursor: pointer;
+  margin: 0.5vw;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.whats:hover {
+  background-color: #126245;
+  border: 1.5px solid white;
+}
+
+.whats.active {
+  background-color: #126245;
+  border: 1.5px solid white;
+}
+
+/* btn */
+.tele.active {
+  background-color: #0875a3;
+  border: 1.5px solid white;
+}
+
+.tele {
+  height: 60px;
+  width: 140px;
+  font-size: 1.1rem;
+  background-color: #09658c;
+  color: white;
+  cursor: pointer;
+  margin: 0.5vw;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.tele:hover {
+  background-color: #0875a3;
+  border: 1.5px solid white;
+}
+
+/* ------------------------------------------------------ */
+
+.text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: -2.5vh;
+  color: white;
+}
+
+/* ------------------------------------------------------ */
+
+.numInput {
+  background-color: white;
+  border-radius: 10px;
+  height: 60px;
+  width: 700px;
+  display: flex;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.inPut {
+  justify-items: center;
+  margin-top: 7vh;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ------------------------------------------------------ */
+
+.numSubmit {
+  height: 50px;
+  width: 110px;
+  font-size: 1.1rem;
+  background-color: #104e37;
+  color: white;
+  cursor: pointer;
+  margin: 2vw;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.numSubmit:hover {
+  background-color: #126245;
+  border: 1px solid white;
+}
+
+.numSubmitTele {
+  height: 50px;
+  width: 110px;
+  font-size: 1.1rem;
+  background-color: #09658c;
+  color: white;
+  cursor: pointer;
+  margin: 2vw;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.numSubmitTele:hover {
+  background-color: #0875a3;
+  border: 1px solid white;
+}
+
+/* ------------------------------------------------------ */
+
+.footerWhats {
+  background-color: #104e37;
+  color: white;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footerWhats a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerWhats a:hover {
+  text-decoration: underline;
+}
+
+.footerWhats h2 {
+  margin: 0;
+  color: white;
+  margin-top: 3vh;
+  font-size: 1.1rem;
+}
+
+.footerWhats h3 {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  font-size: 0.9rem;
+}
+
+.footerTele {
+  background-color: #09658c;
+  color: white;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footerTele a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerTele a:hover {
+  text-decoration: underline;
+}
+
+.footerTele h2 {
+  margin: 0;
+  color: white;
+  margin-top: 3vh;
+  font-size: 1.1rem;
+}
+
+.footerTele h3 {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  font-size: 0.9rem;
+}
+
+/* -------------------------------------------- */
+
+/* alert */
+#custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert-content button {
+  background: #be2626;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+  border-radius: 10px;
+}
+
+.alert-content button:hover {
+  background: #dd3535;
+}
+
+/* -------------------------------------------- */
+
+/* Small Phones */
+@media (max-width: 768px) and (min-width: 481px) {
+  /* btns */
+  .whats {
+    height: 50px;
+    width: 110px;
+    font-size: 0.9rem;
+    margin: 0.5vw;
+    border: 1.5px solid transparent;
+    gap: 3px;
+  }
+
+  #buttns i {
+    font-size: 1.3rem;
+  }
+
+  .tele {
+    height: 50px;
+    width: 110px;
+    font-size: 0.9rem;
+    margin: 0.5vw;
+    border: 1.5px solid transparent;
+    gap: 3px;
+  }
+
+  .text {
+    font-size: 90%;
+    margin-top: -1vh;
+  }
+
+  .numInput {
+    height: 60px;
+    width: 80%;
+    font-size: 1.4rem;
+  }
+
+  .numSubmit {
+    height: 40px;
+    width: 90px;
+    font-size: 1rem;
+    margin: 5vw;
+  }
+
+  .numSubmitTele {
+    height: 40px;
+    width: 90px;
+    font-size: 1rem;
+    margin: 5vw;
+  }
+
+  /* ----------- */
+
+  .footerWhats h2 {
+    margin-top: 3vh;
+    font-size: 0.8rem;
+  }
+
+  .footerWhats h3 {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    font-size: 0.7rem;
+  }
+
+  .footerTele h2 {
+    margin-top: 3vh;
+    font-size: 0.8rem;
+  }
+
+  .footerTele h3 {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    font-size: 0.7rem;
+  }
+}
