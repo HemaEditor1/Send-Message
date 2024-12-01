@@ -1,396 +1,425 @@
 body {
-  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
-  background-color: #171515;
-  /* perspective: 1500px; */
-
-  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  font-family: "Zain", sans-serif;
+  scroll-behavior: smooth;
+  direction: rtl;
 }
 
-/* ------------------------------------------------------ */
+#Quran {
+  font-family: "Amiri", serif;
+}
 
-.bodyWhats {
-  background-color: #060c0c;
-  background-image: url("./Elements/Pattern3.png");
+#Quran h3 {
+  font-size: 3vh;
+  margin-top: -2vh;
+}
+
+#Quran h2 {
+  font-size: 4.8vh;
+}
+
+.header {
+  background-image: url(Elements/Background/bk\ -\ h&f.png);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.bodyWhats.deactive {
-  opacity: 0;
-  transform: rotateY(90deg);
+.header img {
+  width: 30%;
+  margin: 4vh;
 }
 
-.bodyTele {
-  background-color: #0b1016;
-  background-image: url("./Elements/Pattern3.png");
+.header.night {
+  background-image: url(Elements/Background/bk\ -\ h&f\ -\ night.png);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  opacity: 0;
-  transform: rotateY(90deg);
-}
-
-.bodyTele.active {
-  opacity: 1;
-  transform: rotateY(0deg);
-}
-
-/* ------------------------------------------------------ */
-
-.headWhats {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 13vh;
-  background-color: #104e37;
 }
-
-.headWhats img {
-  display: flex;
-  height: 8vh;
-}
-
-.headTele {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 13vh;
-  background-color: #09658c;
-}
-
-.headTele img {
-  display: flex;
-  height: 8vh;
-}
-
-/* ------------------------------------------------------ */
-
-#buttns {
-  display: flex;
-  justify-content: center;
-  margin-top: 2vh;
-}
-
-#buttns i {
-  font-size: 1.4rem;
-}
-
-.whats {
-  height: 60px;
-  width: 140px;
-  font-size: 1.1rem;
-  background-color: #104e37;
-  color: white;
-  cursor: pointer;
-  margin: 0.5vw;
-  border: 1.5px solid transparent;
-  border-radius: 10px;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.whats:hover {
-  background-color: #126245;
-  border: 1.5px solid white;
-}
-
-.whats.active {
-  background-color: #126245;
-  border: 1.5px solid white;
-}
-
-/* btn */
-.tele.active {
-  background-color: #0875a3;
-  border: 1.5px solid white;
-}
-
-.tele {
-  height: 60px;
-  width: 140px;
-  font-size: 1.1rem;
-  background-color: #09658c;
-  color: white;
-  cursor: pointer;
-  margin: 0.5vw;
-  border: 1.5px solid transparent;
-  border-radius: 10px;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.tele:hover {
-  background-color: #0875a3;
-  border: 1.5px solid white;
-}
-
-/* ------------------------------------------------------ */
 
 .text {
-  text-align: center;
-  font-size: 1.4rem;
-  margin-top: -2.5vh;
-  color: white;
-}
-
-/* ------------------------------------------------------ */
-
-.numInput {
-  background-color: white;
-  border-radius: 10px;
-  height: 60px;
-  width: 700px;
+  position: relative;
+  width: 80%;
   display: flex;
+  align-items: center;
   text-align: center;
-  font-size: 1.8rem;
-}
-
-.inPut {
-  justify-items: center;
-  margin-top: 7vh;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-/* ------------------------------------------------------ */
-
-.numSubmit {
-  height: 50px;
-  width: 110px;
-  font-size: 1.1rem;
-  background-color: #104e37;
-  color: white;
-  cursor: pointer;
-  margin: 2vw;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  transition: 0.3s ease;
-}
-
-.numSubmit:hover {
-  background-color: #126245;
-  border: 1px solid white;
-}
-
-.numSubmitTele {
-  height: 50px;
-  width: 110px;
-  font-size: 1.1rem;
-  background-color: #09658c;
-  color: white;
-  cursor: pointer;
-  margin: 2vw;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  transition: 0.3s ease;
-}
-
-.numSubmitTele:hover {
-  background-color: #0875a3;
-  border: 1px solid white;
-}
-
-/* ------------------------------------------------------ */
-
-.footerWhats {
-  background-color: #104e37;
-  color: white;
-  position: fixed;
-  display: flex;
-  width: 100%;
-  bottom: 0;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  font-size: 1.5rem;
 }
 
-.footerWhats a {
-  color: white;
-  text-decoration: none;
+.text h4 {
+  margin-top: -4vh;
 }
 
-.footerWhats a:hover {
-  text-decoration: underline;
-}
-
-.footerWhats h2 {
-  margin: 0;
-  color: white;
-  margin-top: 3vh;
-  font-size: 1.1rem;
-}
-
-.footerWhats h3 {
+.text h5 {
   margin-top: 1vh;
-  margin-bottom: 3vh;
-  font-size: 0.9rem;
 }
 
-.footerTele {
-  background-color: #09658c;
-  color: white;
-  position: fixed;
-  display: flex;
-  width: 100%;
-  bottom: 0;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.footerTele a {
-  color: white;
-  text-decoration: none;
-}
-
-.footerTele a:hover {
-  text-decoration: underline;
-}
-
-.footerTele h2 {
-  margin: 0;
-  color: white;
-  margin-top: 3vh;
-  font-size: 1.1rem;
-}
-
-.footerTele h3 {
-  margin-top: 1vh;
-  margin-bottom: 3vh;
-  font-size: 0.9rem;
-}
-
-/* -------------------------------------------- */
-
-/* alert */
-#custom-alert {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.alert-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.alert-content button {
-  background: #be2626;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: 0.3s ease;
+/* Buttons */
+.theSwitshBtnDay {
+  height: 65px;
+  width: 136px;
+  background-size: cover;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-image: url(Elements/Background/bk\ -\ btn.png);
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  cursor: pointer;
 }
 
-.alert-content button:hover {
-  background: #dd3535;
+.theSwitshBtnDay img {
+  width: 90%;
 }
 
-/* -------------------------------------------- */
+.theSwitshBtnDay.deactive {
+  opacity: 0.8;
+}
+
+.theSwitshBtnDay:hover {
+  opacity: 0.9;
+}
+
+.theSwitshBtnNight {
+  height: 65px;
+  width: 136px;
+  background-size: cover;
+  border: none;
+  border-radius: 5px;
+  background-image: url(Elements/Background/bk\ -\ btn\ -\ night.png);
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.theSwitshBtnNight img {
+  width: 90%;
+}
+
+.theSwitshBtnNight.deactive {
+  opacity: 0.8;
+}
+
+.theSwitshBtnNight:hover {
+  opacity: 0.9;
+}
+
+/* Zekr Box */
+.box {
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh;
+  background-image: url(Elements/Background/bk\ -\ box.png);
+  font-size: 1.3rem;
+}
+
+.box h2 {
+  margin: 2vh;
+}
+
+.box.night {
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  margin: 10vh;
+  background-image: url(Elements/Background/bk\ -\ box\ -\ night.png);
+  font-size: 1.3rem;
+}
+
+.smlNum {
+  background: none;
+  border-radius: 5px;
+  border: solid white 2px;
+  color: white;
+  font-size: 1.9rem;
+  align-items: center;
+  width: 10vw;
+  height: 11vh;
+  transition: 0.2s ease;
+  cursor: pointer;
+  margin-top: 5vh;
+}
+
+.smlNum:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.smlNum.deactive {
+  background: none;
+  border-radius: 5px;
+  border: solid rgba(255, 255, 255, 0.674) 2px;
+  color: rgba(255, 255, 255, 0.674);
+  font-size: 1.5rem;
+  align-items: center;
+  width: 10vw;
+  height: 11vh;
+  transition: 0.2s ease;
+  cursor: default;
+  margin-top: 5vh;
+}
+
+span {
+  font-size: 3rem;
+}
+
+.zekr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textBFooter {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-bottom: 10vh;
+}
+
+.footer {
+  background-image: url(Elements/Background/bk\ -\ h&f.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer h2 {
+  margin: 0;
+  color: white;
+  margin-top: 3vh;
+}
+
+.footer h3 {
+  margin-top: 0.1vh;
+  margin-bottom: 3vh;
+}
+
+.footer.night {
+  background-image: url(Elements/Background/bk\ -\ h&f\ -\ night.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
 
 /* Small Phones */
-@media (max-width: 768px) and (min-width: 481px) {
-  /* btns */
-  .whats {
-    height: 50px;
-    width: 110px;
-    font-size: 0.9rem;
-    margin: 0.5vw;
-    border: 1.5px solid transparent;
-    gap: 3px;
-  }
-
-  #buttns i {
-    font-size: 1.3rem;
-  }
-
-  .tele {
-    height: 50px;
-    width: 110px;
-    font-size: 0.9rem;
-    margin: 0.5vw;
-    border: 1.5px solid transparent;
-    gap: 3px;
+@media (max-width: 480px) {
+  .header img {
+    height: 7vh;
+    width: auto;
   }
 
   .text {
-    font-size: 90%;
+    position: relative;
+    width: 90%;
+  }
+
+  .text h4 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 6vh;
+  }
+
+  .text h5 {
+    margin-top: 2vh;
+    font-weight: 700;
+    margin-bottom: 5vh;
+    font-size: 0.66rem;
+  }
+
+  .theSwitshBtnDay {
+    height: 45px;
+    width: 85px;
+  }
+
+  .theSwitshBtnNight {
+    height: 45px;
+    width: 85px;
+  }
+
+  #Quran h3 {
+    font-size: 1.8vh;
+  }
+
+  #Quran h2 {
     margin-top: -1vh;
+    font-size: 2.8vh;
   }
 
-  .numInput {
+  #Quran {
+    margin-top: 4vh;
+  }
+
+  .smlNum {
+    width: 110px;
     height: 60px;
+    font-size: 1rem;
+  }
+
+  .smlNum.deactive {
+    width: 90px;
+    height: 55px;
+    font-size: 0.7rem;
+  }
+
+  span {
+    font-size: 1.9rem;
+  }
+
+  .box {
+    height: 600px;
+    width: 330px;
+    justify-content: center;
+    margin: 0;
+    margin-top: 4vh;
+  }
+
+  .Azkar.Night .box {
+    height: 600px;
+    width: 330px;
+    justify-content: center;
+    margin: 0;
+    margin-top: 4vh;
+  }
+
+  .box h2 {
+    font-size: 1.5rem;
+  }
+
+  .textBFooter h4 {
+    font-size: 1rem;
+  }
+
+  .footer h2 {
+    font-size: 1rem;
+  }
+
+  .footer h3 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Phones */
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .header img {
+    height: 9vh;
+    width: auto;
+  }
+
+  .text {
+    position: relative;
     width: 80%;
-    font-size: 1.4rem;
   }
 
-  .numSubmit {
-    height: 40px;
+  .text h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 6vh;
+  }
+
+  .text h5 {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .theSwitshBtnDay {
+    height: 50px;
     width: 90px;
-    font-size: 1rem;
-    margin: 5vw;
   }
 
-  .numSubmitTele {
-    height: 40px;
+  .theSwitshBtnNight {
+    height: 50px;
     width: 90px;
-    font-size: 1rem;
-    margin: 5vw;
   }
 
-  /* ----------- */
-
-  .footerWhats h2 {
-    margin-top: 3vh;
-    font-size: 0.8rem;
+  #Quran h3 {
+    font-size: 2vh;
   }
 
-  .footerWhats h3 {
-    margin-top: 1vh;
-    margin-bottom: 3vh;
-    font-size: 0.7rem;
+  #Quran h2 {
+    font-size: 3vh;
   }
 
-  .footerTele h2 {
-    margin-top: 3vh;
-    font-size: 0.8rem;
+  #Quran {
+    margin-top: 4vh;
   }
 
-  .footerTele h3 {
-    margin-top: 1vh;
-    margin-bottom: 3vh;
-    font-size: 0.7rem;
+  .smlNum {
+    width: 16vw;
+    height: 8vh;
+    font-size: 1.3rem;
+  }
+
+  .smlNum.deactive {
+    width: 15vw;
+    height: 8vh;
+    font-size: 0.9rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  .box h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer h3 {
+    font-size: 1.2rem;
   }
 }
