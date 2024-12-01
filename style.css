@@ -21,6 +21,7 @@ body {
 .bodyWhats.deactive {
   opacity: 0;
   transform: rotateY(90deg);
+  transition: 0.5s ease;
 }
 
 .bodyTele {
@@ -322,6 +323,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Small Phones */
 @media (max-width: 480px) {
+  .bodyWhats {
+    min-height: 90vh;
+  }
+
+  .bodyTele {
+    height: 100%;
+  }
+
   /* btns */
   .whats {
     height: 45px;
@@ -348,15 +357,15 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .text {
-    font-size: 80%;
-    margin-top: 12vh;
+    font-size: 70%;
+    margin-top: 10vh;
   }
 
   .numInput {
     height: 50px;
     width: 80%;
     margin-top: -5vh;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 
   .numSubmit {
