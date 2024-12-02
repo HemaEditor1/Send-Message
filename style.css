@@ -143,7 +143,7 @@ body {
 
 .text {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-top: 10vh;
   color: white;
 }
@@ -162,7 +162,7 @@ body {
 
 .inPut {
   justify-items: center;
-  margin-top: -2vh;
+  margin-top: -1.5vh;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -358,13 +358,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .text {
     font-size: 70%;
-    margin-top: 10vh;
+    margin-top: 9vh;
   }
 
   .numInput {
     height: 50px;
     width: 80%;
-    margin-top: -5vh;
+    margin-top: 2vh;
     font-size: 1.1rem;
   }
 
