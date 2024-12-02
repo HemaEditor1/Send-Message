@@ -144,7 +144,7 @@ body {
 .text {
   text-align: center;
   font-size: 1.4rem;
-  margin-top: -2.5vh;
+  margin-top: 10vh;
   color: white;
 }
 
@@ -162,7 +162,7 @@ body {
 
 .inPut {
   justify-items: center;
-  margin-top: 7vh;
+  margin-top: -2vh;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
